@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Adapters</string>
+    <array name="list_options">
+        <item>Lista simples</item>
+        <item>Lista customizada</item>
+        <item>Lista agrupada</item>
+        <item>Autocomplete</item>
+    </array>
+
+    <array name="list_products">
+        <item>Keyboard</item>
+        <item>Mouse</item>
+        <item>Notebook</item>
+        <item>Printer</item>
+    </array>
+</resources>

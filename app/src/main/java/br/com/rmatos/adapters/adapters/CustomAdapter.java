@@ -10,10 +10,6 @@ import java.util.List;
 
 import br.com.rmatos.adapters.interfaces.OnItemSelectedListener;
 
-/**
- * Created by renato on 12/03/17.
- */
-
 public abstract class CustomAdapter<T extends Object, H extends Object> extends BaseAdapter {
 
     private Context context;

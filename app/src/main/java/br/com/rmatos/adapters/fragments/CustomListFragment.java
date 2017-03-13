@@ -22,7 +22,7 @@ public class CustomListFragment extends ListFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
-        adp = new ProductAdapter(getActivity(), getData());
+        adp = new ProductAdapter(getActivity(), ProductModel.fakeList());
         setListAdapter(adp);
     }
 
@@ -35,15 +35,6 @@ public class CustomListFragment extends ListFragment {
             OnItemSelectedListener handler = (OnItemSelectedListener)activity;
             handler.Select(value);
         }
-    }
-
-    private ArrayList<ProductModel> getData(){
-        ArrayList<ProductModel> result = new ArrayList<ProductModel>();
-        result.add(new ProductModel("Keyboard", R.drawable.item_keyboard));
-        result.add(new ProductModel("Mouse", R.drawable.item_mouse));
-        result.add(new ProductModel("Notebook", R.drawable.item_notebook));
-        result.add(new ProductModel("Printer", R.drawable.item_printer));
-        return result;
     }
 
 }

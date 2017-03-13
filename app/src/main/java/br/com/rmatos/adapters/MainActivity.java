@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import br.com.rmatos.adapters.fragments.AutoCompleteFragment;
 import br.com.rmatos.adapters.fragments.CustomGroupListFragment;
 import br.com.rmatos.adapters.fragments.CustomListFragment;
 import br.com.rmatos.adapters.fragments.SimpleListFragment;
@@ -41,13 +42,15 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String item = list[i];
-                ListFragment fragment = null;
+                Fragment fragment = null;
                 if (item.equals("Lista simples")){
                     fragment = new SimpleListFragment();
                 } else if (item.equals("Lista customizada")){
                     fragment = new CustomListFragment();
                 } else if (item.equals("Lista agrupada")){
                     fragment = new CustomGroupListFragment();
+                } else {
+                    fragment = new AutoCompleteFragment();
                 }
                 if (fragment != null){
                     replaceFragment(fragment);
@@ -63,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
 
     }
 
-    private void replaceFragment(ListFragment fragment){
+    private void replaceFragment(Fragment fragment){
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.customLayout, fragment);

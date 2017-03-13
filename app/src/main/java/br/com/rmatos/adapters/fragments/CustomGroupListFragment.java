@@ -26,18 +26,11 @@ public class CustomGroupListFragment extends ListFragment {
     private ExpandableListView listView;
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState){
-        super.onActivityCreated(savedInstanceState);
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         adp = new ProductGroupAdapter(getActivity(), getData());
-
         View view = inflater.inflate(R.layout.product_view_group_model, null);
         listView = (ExpandableListView)view.findViewById(R.id.listView);
         listView.setAdapter(adp);
-
         return view;
     }
 

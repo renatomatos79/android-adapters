@@ -62,7 +62,7 @@ public abstract class CustomAdapter<T extends Object, H extends Object> extends 
                 public void onClick(View view) {
                     if (context instanceof OnItemSelectedListener){
                         OnItemSelectedListener listener = (OnItemSelectedListener)context;
-                        listener.Select(model);
+                        listener.select(model);
                     }
                 }
             });

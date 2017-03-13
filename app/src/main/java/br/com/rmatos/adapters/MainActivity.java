@@ -1,10 +1,8 @@
 package br.com.rmatos.adapters;
 
-import android.icu.text.Replaceable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.app.ListFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,11 +35,10 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         spnOptions = (Spinner) findViewById(R.id.spnOptions);
         spnOptions.setAdapter(adpOptions);
 
-
         spnOptions.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                String item = list[i];
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                String item = list[position];
                 Fragment fragment = null;
                 if (item.equals("Lista simples")){
                     fragment = new SimpleListFragment();
@@ -74,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
     }
 
     @Override
-    public void Select(Object item) {
+    public void select(Object item) {
         String name = "";
 
         if (item instanceof String){

@@ -4,12 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import br.com.rmatos.adapters.R;
 import br.com.rmatos.adapters.adapters.ProductAdapter;
 import br.com.rmatos.adapters.interfaces.OnItemSelectedListener;
 import br.com.rmatos.adapters.models.ProductModel;
@@ -33,7 +31,7 @@ public class CustomListFragment extends ListFragment {
         if (activity instanceof OnItemSelectedListener){
             String value = (String)l.getItemAtPosition(position);
             OnItemSelectedListener handler = (OnItemSelectedListener)activity;
-            handler.Select(value);
+            handler.select(value);
         }
     }
 

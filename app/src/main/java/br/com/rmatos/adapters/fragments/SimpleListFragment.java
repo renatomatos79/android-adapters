@@ -9,7 +9,6 @@ import android.widget.ListView;
 
 import br.com.rmatos.adapters.R;
 import br.com.rmatos.adapters.interfaces.OnItemSelectedListener;
-import br.com.rmatos.adapters.models.ProductModel;
 
 public class SimpleListFragment extends ListFragment {
 
@@ -31,7 +30,7 @@ public class SimpleListFragment extends ListFragment {
         if (activity instanceof OnItemSelectedListener){
             String name = (String)l.getItemAtPosition(position);
             OnItemSelectedListener listener = (OnItemSelectedListener)activity;
-            listener.Select(name);
+            listener.select(name);
         }
     }
 

@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
@@ -102,7 +101,7 @@ public abstract class CustomGroupAdapter<T extends Object, H extends Object> ext
                 public void onClick(View view) {
                     if (context instanceof OnItemSelectedListener){
                         OnItemSelectedListener listener = (OnItemSelectedListener)context;
-                        listener.Select(model);
+                        listener.select(model);
                     }
                 }
             });

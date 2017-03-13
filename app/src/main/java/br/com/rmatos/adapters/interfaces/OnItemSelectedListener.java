@@ -5,5 +5,5 @@ package br.com.rmatos.adapters.interfaces;
  */
 
 public interface OnItemSelectedListener<T extends Object> {
-    void Select(T item);
+    void select(T item);
 }

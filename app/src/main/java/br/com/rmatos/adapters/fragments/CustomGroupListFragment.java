@@ -14,7 +14,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import br.com.rmatos.adapters.R;
-import br.com.rmatos.adapters.adapters.ProductAdapter;
 import br.com.rmatos.adapters.adapters.ProductGroupAdapter;
 import br.com.rmatos.adapters.interfaces.OnItemSelectedListener;
 import br.com.rmatos.adapters.models.ProductModel;
@@ -41,7 +40,7 @@ public class CustomGroupListFragment extends ListFragment {
         if (activity instanceof OnItemSelectedListener){
             String value = (String)l.getItemAtPosition(position);
             OnItemSelectedListener handler = (OnItemSelectedListener)activity;
-            handler.Select(value);
+            handler.select(value);
         }
     }
 
